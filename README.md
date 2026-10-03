@@ -28,7 +28,7 @@ Deep models are means over three seeds (42, 123, 2024).
 
 ## Data
 
-The Base variant of the [Bank Account Fraud (BAF) Suite](https://arxiv.org/abs/2211.13358) (Jesus et al., NeurIPS 2022): one million synthetic applications over eight months, 31 predictors. The data is **not** included in this repository. Download `Base.csv` from the dataset's Kaggle page and place it in `data/`. Please check the dataset's licence before reuse.
+The Base variant of the [Bank Account Fraud (BAF) Suite](https://arxiv.org/abs/2211.13358) (Jesus et al., NeurIPS 2022): one million synthetic applications over eight months, 31 predictors. The data is **not** included in this repository. Download `Base.csv` from the dataset's [Kaggle page](https://www.kaggle.com/datasets/sgpjesus/bank-account-fraud-dataset-neurips-2022) and place it in `data/`. Please check the dataset's licence before reuse.
 
 After cleaning (dropping three high-missingness variables and one constant variable, then listwise deletion of 6,393 records) the analysis sample has 993,607 records, 10,995 of them fraudulent.
 
