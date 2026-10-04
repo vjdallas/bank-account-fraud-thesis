@@ -76,8 +76,6 @@ Run all R scripts from the project root (they use relative paths like `R/00_data
 
 The tuning scripts (steps 2 to 6) are slow (the XGBoost searches take hours). `04_final_models.R` has the selected hyperparameters hard-coded, so run it directly to reproduce the final results.
 
-The tuning scripts and `04_final_models.R` build the target factor with a different level order, so the same seed gives two different 70/30 splits. This is intended: hyperparameters are chosen on cross-validation subsamples, and every reported metric comes from the split in `04_final_models.R`.
-
 ## Limitations
 
 - A single synthetic benchmark, so results may not transfer to live bank data.
