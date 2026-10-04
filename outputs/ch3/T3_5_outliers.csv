@@ -1,0 +1,15 @@
+"Variable","Lower_Bound","Upper_Bound","Outliers_n","Outliers_pct","Fraud_Rate_Among_Outliers"
+"income",-0.45,1.55,0,0,NA
+"name_email_similarity",-0.57,1.55,0,0,NA
+"current_address_months_count",-145,295,41389,4.17,1.37
+"customer_age",-10,70,1357,0.14,5.01
+"days_since_request",-0.02,0.05,93307,9.39,1.3
+"zip_count_4w",-680,3520,59538,5.99,1.16
+"velocity_6h",-2925.42,14048.57,8947,0.9,0.69
+"velocity_24h",356.81,8989.43,2937,0.3,0.34
+"velocity_4w",2439.12,7317.53,0,0,NA
+"bank_branch_count_8w",-35,61,174496,17.56,0.74
+"date_of_birth_distinct_emails_4w",-4.5,23.5,9674,0.97,0.61
+"credit_risk_score",-59.5,320.5,8703,0.88,4.06
+"proposed_credit_limit",-250,950,240575,24.21,2.12
+"session_length_in_minutes",-5.51,17.5,78486,7.9,1.45

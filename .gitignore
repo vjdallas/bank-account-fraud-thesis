@@ -1,0 +1,29 @@
+# data (download from Kaggle, see data/README.md)
+data/*
+!data/README.md
+_smoke/
+*.fst
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+Rplots.pdf
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.venv/
+venv/
+
+# model weights and other large binaries
+*.pt
+*.pkl
+*.rds
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

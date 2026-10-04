@@ -1,0 +1,15 @@
+"Variable","Median_Legit","Median_Fraud","Delta_Median","Mean_Legit","Mean_Fraud","Delta_Mean"
+"velocity_6h",5328.326,4916.465,-411.862,5673.525,5183.941,-489.584
+"proposed_credit_limit",200,500,300,512.737,834.319,321.582
+"velocity_4w",4914.733,4827.842,-86.891,4857.943,4755.417,-102.527
+"velocity_24h",4751.672,4666.108,-85.565,4771.945,4612.81,-159.134
+"zip_count_4w",1263,1328,65,1573.157,1622.199,49.043
+"credit_risk_score",122,178,56,130.523,177.619,47.097
+"current_address_months_count",52,94,42,86.647,114.925,28.278
+"customer_age",30,40,10,33.614,40.858,7.243
+"bank_branch_count_8w",9,2,-7,185.416,134.356,-51.06
+"date_of_birth_distinct_emails_4w",9,7,-2,9.525,7.442,-2.083
+"name_email_similarity",0.494,0.293,-0.201,0.495,0.393,-0.102
+"income",0.6,0.8,0.2,0.561,0.687,0.125
+"session_length_in_minutes",5.12,5.127,0.006,7.55,8.244,0.694
+"days_since_request",0.015,0.013,-0.002,1.017,1.047,0.029

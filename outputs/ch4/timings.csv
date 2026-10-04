@@ -1,0 +1,16 @@
+"Stage","Seconds"
+"lr_fit",15.11
+"lr_predict",0.15
+"dt3a_fit",147.19
+"dt3a_predict",1.61
+"dt3b_fit",89.88
+"dt3b_predict",0.21
+"rf_default_fit",413.93
+"rf_default_predict",31.01
+"rf_balanced_fit",477.31
+"rf_balanced_predict",80.19
+"xgb_prep",0.29
+"xgb_default_fit",12.31
+"xgb_default_predict",0.1
+"xgb_balanced_fit",31.2
+"xgb_balanced_predict",0.27

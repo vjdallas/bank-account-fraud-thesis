@@ -1,0 +1,14 @@
+"Variable","Distinct_Levels","Missing_Values","Most_Frequent_Level","Count_Most_Freq","Percent_Most_Freq"
+"email_is_free",2,0,"1",526092,52.95
+"phone_home_valid",2,0,"0",578984,58.27
+"phone_mobile_valid",2,0,"1",883950,88.96
+"has_other_cards",2,0,"0",771698,77.67
+"foreign_request",2,0,"0",968498,97.47
+"keep_alive_session",2,0,"1",574050,57.77
+"month",8,0,"3",149970,15.09
+"payment_type",5,0,"AB",368115,37.05
+"employment_status",7,0,"CA",725305,73
+"housing_status",7,0,"BC",368343,37.07
+"source",2,0,"INTERNET",988252,99.46
+"device_os",5,0,"other",339809,34.2
+"device_distinct_emails_8w",3,0,"1",963320,96.95

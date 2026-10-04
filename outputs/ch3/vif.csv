@@ -1,0 +1,15 @@
+"Feature","VIF","R2"
+"credit_risk_score",1.748,0.4278
+"proposed_credit_limit",1.672,0.4019
+"velocity_4w",1.654,0.3953
+"velocity_24h",1.584,0.3685
+"date_of_birth_distinct_emails_4w",1.347,0.2574
+"velocity_6h",1.338,0.2526
+"customer_age",1.284,0.2209
+"zip_count_4w",1.115,0.1035
+"current_address_months_count",1.072,0.0672
+"income",1.062,0.0581
+"session_length_in_minutes",1.018,0.0178
+"name_email_similarity",1.015,0.0148
+"days_since_request",1.014,0.0135
+"bank_branch_count_8w",1.008,0.0075

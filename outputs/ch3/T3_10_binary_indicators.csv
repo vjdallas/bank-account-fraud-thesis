@@ -1,0 +1,15 @@
+"Variable","Level","Fraud_Count","Total_Count","Fraud_Ratio","Lift"
+"foreign_request","1",555,25109,0.0221,2
+"foreign_request","0",10440,968498,0.0108,0.98
+"keep_alive_session","0",7233,419557,0.0172,1.55
+"keep_alive_session","1",3762,574050,0.0066,0.6
+"source","TELEAPP",97,5355,0.0181,1.64
+"source","INTERNET",10898,988252,0.011,0.99
+"phone_mobile_valid","0",1645,109657,0.015,1.36
+"phone_mobile_valid","1",9350,883950,0.0106,0.96
+"phone_home_valid","0",8215,578984,0.0142,1.28
+"phone_home_valid","1",2780,414623,0.0067,0.61
+"email_is_free","1",7264,526092,0.0138,1.25
+"email_is_free","0",3731,467515,0.008,0.72
+"has_other_cards","0",10065,771698,0.013,1.17
+"has_other_cards","1",930,221909,0.0042,0.38

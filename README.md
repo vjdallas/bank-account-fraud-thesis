@@ -5,7 +5,7 @@ Code and results for my MSc thesis at the University of the Aegean (2026). The p
 ## Key findings
 
 - **Gradient boosting wins.** XGBoost reached a test ROC-AUC of 0.893 and recovered 55% of fraud at a 5% false-positive rate.
-- **A deep tabular model came close but did not beat it.** The FT-Transformer scored ROC-AUC 0.887,and a plain MLP matched logistic regression (0.876 vs 0.875).
+- **A deep tabular model came close but did not beat it.** The FT-Transformer scored ROC-AUC 0.887, and a plain MLP matched logistic regression (0.876 vs 0.875).
 - **The threshold matters as much as the model.** The same decision tree caught 6% of fraud at a 0.5 threshold and 69% at a threshold of 0.011.
 - **Class weighting barely changed anything** for random forests or XGBoost.
 
@@ -24,7 +24,7 @@ Code and results for my MSc thesis at the University of the Aegean (2026). The p
 | MLP | 0.5 | 0.8756 | 0.1437 | 0.5062 |
 | FT-Transformer | 0.5 | 0.8872 | 0.1672 | 0.5356 |
 
-Deep models are means over three seeds (42, 123, 2024).
+Deep models are means over three seeds (42, 123, 2024). The notebook in `python/` additionally runs a timed 5-fold cross-validation of both deep models; its fold-averaged test scores (MLP 0.8750, FT-Transformer 0.8877 ROC-AUC) differ slightly from the three-seed figures above.
 
 ## Data
 
@@ -41,10 +41,12 @@ After cleaning (dropping three high-missingness variables and one constant varia
 ## Repository structure
 
 ```
-R/          classical models (logistic regression, trees, random forests, XGBoost)
-python/     MLP and FT-Transformer (PyTorch)
-outputs/    metrics tables and figures
-data/       
+R/                   classical models (logistic regression, trees, random forests, XGBoost)
+python/              MLP and FT-Transformer (PyTorch)
+outputs/             metrics tables and figures
+data/                place Base.csv here (not included, see data/README.md)
+install_packages.R   installs the R packages used by the scripts
+requirements.txt     Python packages for the notebook
 ```
 ## Reproducing the results
 
@@ -56,23 +58,25 @@ data/
 
 #### Run order
 
-Run all R scripts from the project root (they use relative paths like `R/00_data.R`), with `Base.csv` in `data/`.
+Run all R scripts from the project root (they use relative paths like `R/00_data.R`), with `Base.csv` in `data/`. Install the R packages first with `Rscript install_packages.R`. All scripts use 4 threads.
 
 | Step | Script | Purpose | Output |
 |---|---|---|---|
 | 1 | `R/01_ch3_tables.R` | Chapter 3 tables and figures | `outputs/ch3/` |
 | 2 | `R/02_tune_dt.R` | Decision tree tuning (cp grid, default and balanced priors) | `outputs/tuning/` |
-| 3 | `R/02_tune_rf.R` | Random forest tree-count sweep | `outputs/tuning/` |
+| 3 | `R/02_tune_rf.R` | Random forest tree-count sweep (the final model uses 1000 trees) | `outputs/tuning/` |
 | 4 | `R/02_tune_rf_balanced.R` | Class-weighted random forest grid | `outputs/tuning/` |
 | 5 | `R/02_tune_xgb.R` | XGBoost grid, default | `outputs/tuning/` |
 | 6 | `R/02_tune_xgb_balanced.R` | XGBoost grid, `scale_pos_weight` | `outputs/tuning/` |
 | 7 | `R/04_final_models.R` | Refits the final models, metrics, figures, timings, `sessionInfo.txt` | `outputs/ch4/` |
 | 8 | `R/05_cv_timing.R` | Wall-clock cost of the hyperparameter searches | `outputs/cv_timings.csv` |
-| 9 | `python/thesis_python_nn.ipynb` | MLP and FT-Transformer (reads `Base.csv` from Google Drive) | Colab |
+| 9 | `python/deep_models.ipynb` | MLP and FT-Transformer, timed 5-fold CV, train/validation/test metrics (reads `Base.csv` from Google Drive) | Google Drive |
 
 `R/00_data.R` is loaded by every other script via `source()` and is not run on its own. Logistic regression has no tuning script; it is fitted directly in `04_final_models.R`.
 
-The tuning scripts (steps 2 to 6) are slow (the XGBoost searches takes hours), and `04_final_models.R` has the selected hyperparameters hard-coded, run directly `04_final_models.R` to reproduce the final results.
+The tuning scripts (steps 2 to 6) are slow (the XGBoost searches take hours). `04_final_models.R` has the selected hyperparameters hard-coded, so run it directly to reproduce the final results.
+
+The tuning scripts and `04_final_models.R` build the target factor with a different level order, so the same seed gives two different 70/30 splits. This is intended: hyperparameters are chosen on cross-validation subsamples, and every reported metric comes from the split in `04_final_models.R`.
 
 ## Limitations
 

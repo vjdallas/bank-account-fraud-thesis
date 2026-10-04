@@ -1,0 +1,7 @@
+"Variable","NonFraud_N_Missing","NonFraud_Pct_of_Tot","NonFraud_Rate","Fraud_N_Missing","Fraud_Pct_of_Tot","Fraud_Rate","Total_Missing"
+"prev_address_months_count",702786,98.58,71.06,10134,1.42,91.89,712920
+"current_address_months_count",4240,99.67,0.43,14,0.33,0.13,4254
+"intended_balcon_amount",732776,98.69,74.09,9747,1.31,88.38,742523
+"bank_months_count",249495,98.37,25.23,4140,1.63,37.54,253635
+"session_length_in_minutes",1997,99.11,0.2,18,0.89,0.16,2015
+"device_distinct_emails_8w",355,98.89,0.04,4,1.11,0.04,359

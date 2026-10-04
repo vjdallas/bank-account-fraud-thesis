@@ -1,0 +1,9 @@
+# python/deep_models.ipynb (Python 3.10+)
+numpy
+pandas
+scikit-learn>=1.2
+matplotlib
+seaborn
+torch>=2.3
+rtdl_revisiting_models==0.0.2
+jupyter
